@@ -46,12 +46,12 @@ app.get("/favorite_movies", async(req,res) =>{
 
 //TODO: I want to CREATE new data
 app.post("/add_favorite_movies", async(req,res) => {
-    const { movie_title, release_year} = req.body;
+    const { movie_title, release_year, poster_path} = req.body;
     try{
         const insert = await db.query(
-            `INSERT INTO favorite_movies(movie_title, release_year)
-            VALUES($1, $2)`,
-            [movie_title, release_year]
+            `INSERT INTO favorite_movies(movie_title, release_year, poster_path)
+            VALUES($1, $2, $3)`,
+            [movie_title, release_year, poster_path]
         );
         res.status(200).json({success:true});
     } catch (error) {

@@ -1,8 +1,9 @@
 function MovieCard({ movie }) {
     async function onFavoriteClick() {
       const loadData = {
-        title: movie.title,
-        release_year: movie.release_date?.split("-")[0] || "Unknown"
+        movie_title: movie.title,
+        release_year: movie.release_date?.split("-")[0] || "Unknown",
+        poster_path: movie.poster_path
       };
   
       try {
