@@ -8,7 +8,7 @@ function Favorites() {
   useEffect(() => {
     const fetchFavorites = async () => {
       try {
-        const response = await fetch("http://localhost:4000/favorite_movies");
+        const response = await fetch("https://week7-fullstack-assignment.onrender.com/favorite_movies");
         const data = await response.json();
         setFavorites(data);
       } catch (error) {

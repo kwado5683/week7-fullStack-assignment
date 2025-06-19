@@ -10,7 +10,7 @@ function MovieCard({ movie }) {
       };
   
       try {
-        const response = await fetch("http://localhost:4000/add_favorite_movies", {
+        const response = await fetch("https://week7-fullstack-assignment.onrender.com/add_favorite_movies", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(loadData)
