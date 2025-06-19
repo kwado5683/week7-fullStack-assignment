@@ -1,3 +1,6 @@
+
+
+
 function MovieCard({ movie }) {
     async function onFavoriteClick() {
       const loadData = {
